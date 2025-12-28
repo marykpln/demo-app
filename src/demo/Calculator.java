@@ -10,7 +10,7 @@ public class Calculator {
 	public static int mul(int x, int y) {
 		return x * y;
 	}
-	public static int div(int x, int y) {
+	public static double div(double x, double y) {
 			if (y == 0) {
         throw new IllegalArgumentException("Division by zero");
     }
