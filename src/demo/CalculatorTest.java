@@ -37,6 +37,7 @@ class CalculatorTest {
 	void testEqualsDiv() {
 		assertEquals(3, Calculator.div(9, 3));
 		assertEquals(0, Calculator.div(0, 9));
+		assertEquals(2.5, Calculator.div(5, 2));
 		assertThrows(IllegalArgumentException.class,
 	                () -> Calculator.div(5, 0));
 		assertTrue(1 == Calculator.div(3, 3));
