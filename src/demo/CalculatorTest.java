@@ -35,14 +35,15 @@ class CalculatorTest {
 	}
 	@Test
 	void testEqualsDiv() {
-		assertEquals(3, Calculator.div(9, 3));
-		assertEquals(0, Calculator.div(0, 9));
-		assertEquals(2.5, Calculator.div(5, 2));
-		assertThrows(IllegalArgumentException.class,
-	                () -> Calculator.div(5, 0));
-		assertTrue(1 == Calculator.div(3, 3));
-		System.out.println("Div");
-		
+	    assertEquals(3.0, Calculator.div(9, 3), 0.0001);
+	    assertEquals(2.5, Calculator.div(5, 2), 0.0001);
+	    assertEquals(0.0, Calculator.div(0, 9), 0.0001);
+
+	    assertThrows(IllegalArgumentException.class,
+	            () -> Calculator.div(5, 0));
+
+	    assertEquals(1.0, Calculator.div(3, 3), 0.0001);
+	    System.out.println("Div");
 	}
 
 }
